@@ -58,11 +58,10 @@
                             <tr>
                                 <td>{{ song.title }}</td>
                                 <td>
-                                    <a target="_blank" href="{{ song.audio.url }}">
-                                        <button type="button" class="btn btn-success btn-xs">
+                                    <audio id={{ song.title }} src="{{ song.audio.url }}"></audio>
+                                        <button type="button" class="btn btn-success btn-xs" value={{song.title}} onclick="play(this)">
                                             <span class="glyphicon glyphicon-play"></span>&nbsp; Play
                                         </button>
-                                    </a>
                                 </td>
                                 {% if user.is_authenticated %}
                                 <td>
@@ -92,4 +91,16 @@
 
 </div>
 
+{% endblock %}
+
+{% block script %}
+    function play(x){
+    var audio = document.getElementById(x.value);
+    if(audio.paused){
+    audio.play();
+}
+else{
+    audio.pause();
+}
+}
 {% endblock %}
