@@ -6,7 +6,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Album, Song
 from django.db.models import Q
 from django.http import JsonResponse
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 from django.views import generic
 from django.conf import settings
 
