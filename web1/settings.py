@@ -13,7 +13,7 @@ SECRET_KEY = '6s!*9(te90c#69gjr5ms(k^li3qy)1wcded6$vtw-f4df+!%**'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','']
+ALLOWED_HOSTS = ['127.0.0.1','music-zone.herokuapp.com']
 
 
 # Application definition
